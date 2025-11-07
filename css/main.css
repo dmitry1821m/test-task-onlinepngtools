@@ -1,0 +1,67 @@
+:root {
+  --light-cream: #FFF9E8;
+  --light-peach: #FFE8D6;
+  --light-pink: #FFDDEB;
+  --light-lavender: #F3E8FF;
+  --light-sky: #E6F4FF;
+  --light-mint: #E9FFF5;
+  --light-yellow: #FFFCE0;
+  --light-sand: #F5EFE6;
+  --light-gray: #F2F2F2;
+  --light-blue-gray: #EEF3F8;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 10px;
+}
+
+.ui-input-radio > input {
+  margin-right: 10px;
+}
+
+.options {
+  background-color: var(--light-cream);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.options--option {
+  background-color: var(--light-peach);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.options--buttons {
+  background-color: var(--light-pink);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.options--button {
+  background-color: var(--light-lavender);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.options--button-list {
+  margin-top: 10px;
+}
+
+.options--button-radio {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.options--button-text {
+  margin-top: 10px;
+}

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onlinepngtools</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div id="main"></div>
+  <!-- Libraries -->
+  <script src="./libs/crel.min.js"></script>
+  <!-- Global app variable to avoid collisions with libraries and browser extensions -->
+  <script>
+    window.onlinepngtoolsGlobal = {
+      mocks: {},
+      model: {},
+      modules: {},
+      ui: {},
+    }
+  </script>
+  <!-- Modules -->
+  <script src="./mocks/config.js"></script>
+  <script src="./model/config.js"></script>
+  <script src="./modules/header.js"></script>
+  <script src="./modules/options.js"></script>
+  <script src="./ui/input-list.js"></script>
+  <script src="./ui/input-radio.js"></script>
+  <script src="./ui/input-text.js"></script>
+  <!-- Init -->
+  <script src="./modules/main.js"></script>
+</body>
+</html>
