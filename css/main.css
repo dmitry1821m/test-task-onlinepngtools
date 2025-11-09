@@ -21,6 +21,11 @@ body {
   padding: 10px;
 }
 
+.ui-input-radio {
+  align-items: center;
+  display: inline-flex;
+}
+
 .ui-input-radio > input {
   margin-right: 10px;
 }
@@ -53,15 +58,13 @@ body {
   padding: 10px;
 }
 
-.options--button-list {
+.options--button-item:not(:first-child) {
   margin-top: 10px;
 }
 
-.options--button-radio {
-  display: inline-block;
+.examples {
+  background-color: var(--light-blue-gray);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   margin-top: 10px;
-}
-
-.options--button-text {
-  margin-top: 10px;
+  padding: 10px;
 }

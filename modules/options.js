@@ -17,13 +17,13 @@
                   crel("p", button.comment)
                 : '',
                 button.type === "list" ?
-                  Select("options--button-list", button.name, button.values)
+                  Select("options--button-item", button.name, button.values)
                 : '',
                 button.type === "radio" ?
-                  InputRadio("options--button-radio", `option-${index}`, button.value, button.label)
+                  InputRadio("options--button-item", `option-${index}`, button.value, button.label)
                 : '',
                 button.type === "text" ?
-                  InputText("options--button-text", button.name, button.value)
+                  InputText("options--button-item", button.name, button.value)
                 : '',
               )
             ))
