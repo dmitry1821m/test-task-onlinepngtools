@@ -1,8 +1,8 @@
 (() => {
-  const { ui } = window.onlinepngtoolsGlobal;
+  const { ui } = globalThis.onlinepngtoolsGlobal;
 
   // prettier-ignore
-  ui.text = (className, name, value) => (
+  ui.InputText = (className, name, value) => (
     crel("input", { class: className, type: 'text', name, value })
   );
 })();

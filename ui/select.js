@@ -1,8 +1,8 @@
 (() => {
-  const { ui } = window.onlinepngtoolsGlobal;
+  const { ui } = globalThis.onlinepngtoolsGlobal;
 
   // prettier-ignore
-  ui.list = (className, name, options) => (
+  ui.Select = (className, name, options) => (
     crel("select", { class: className, name },
       options.map((option) => {
         const optionAttributes = { value: option.value };

@@ -1,5 +1,5 @@
 (() => {
-  const { mocks } = window.onlinepngtoolsGlobal;
+  const { mocks } = globalThis.onlinepngtoolsGlobal;
 
   mocks.config = `
     {

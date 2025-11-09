@@ -1,8 +1,8 @@
 (() => {
-  const { ui } = window.onlinepngtoolsGlobal;
+  const { ui } = globalThis.onlinepngtoolsGlobal;
 
   // prettier-ignore
-  ui.radio = (className, name, checked, label) => {
+  ui.InputRadio = (className, name, checked, label) => {
     const inputAttributes = { type: "radio", name };
 
     if (checked) {

@@ -1,10 +1,8 @@
 (() => {
-  const { model, modules } = window.onlinepngtoolsGlobal;
+  const { model, modules } = globalThis.onlinepngtoolsGlobal;
 
-  modules.header = {
-    render: (container) => {
-      const { name } = model.config.data;
-      crel(container, crel("h1", name));
-    },
+  modules.Header = () => {
+    const { name } = model.config.data;
+    return crel("h1", name);
   };
 })();
