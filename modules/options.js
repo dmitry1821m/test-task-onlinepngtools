@@ -8,22 +8,22 @@
     // prettier-ignore
     const options = crel("div", { class: "options" },
       ...optionsData.map((option, index) => (
-        crel("div", { class: "options--option" },
+        crel("div", { class: "options--group" },
           crel("p", option.group),
-          crel("div", { class: "options--buttons" },
+          crel("div", { class: "options--parameters" },
             ...option.buttons.map((button) => (
-              crel("div", { class: "options--button" },
+              crel("div", { class: "options--parameter" },
                 button.comment ?
                   crel("p", button.comment)
                 : '',
                 button.type === "list" ?
-                  Select("options--button-item", button.name, button.values)
+                  Select("options--parameter-item", button.name, button.values)
                 : '',
                 button.type === "radio" ?
-                  InputRadio("options--button-item", `option-${index}`, button.value, button.label)
+                  InputRadio("options--parameter-item", `option-${index}`, button.value, button.label)
                 : '',
                 button.type === "text" ?
-                  InputText("options--button-item", button.name, button.value)
+                  InputText("options--parameter-item", button.name, button.value)
                 : '',
               )
             ))

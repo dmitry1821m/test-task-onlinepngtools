@@ -37,28 +37,31 @@ body {
   padding: 10px;
 }
 
-.options--option {
+.options--group {
   background-color: var(--light-peach);
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-top: 10px;
   padding: 10px;
 }
 
-.options--buttons {
+.options--parameters {
   background-color: var(--light-pink);
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-top: 10px;
   padding: 10px;
 }
 
-.options--button {
+.options--parameter {
   background-color: var(--light-lavender);
   border: 1px solid rgba(0, 0, 0, 0.5);
-  margin-top: 10px;
   padding: 10px;
 }
 
-.options--button-item:not(:first-child) {
+.options--parameter:not(:first-child) {
+  margin-top: 10px;
+}
+
+.options--parameter-item:not(:first-child) {
   margin-top: 10px;
 }
 
