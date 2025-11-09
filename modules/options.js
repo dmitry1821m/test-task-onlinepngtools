@@ -1,5 +1,5 @@
 (() => {
-  const { model, modules, ui } = globalThis.onlinepngtoolsGlobal;
+  const { elementDataKey, model, modules, ui } = globalThis.onlinepngtoolsGlobal;
 
   modules.Options = () => {
     const { InputRadio, InputText, Select } = ui;
@@ -32,10 +32,12 @@
       ))
     );
 
-    const setOptionParameters = (...args) => {
-      alert(JSON.stringify(args));
-    };
+    options[elementDataKey] = {
+      setOptionParameters: (...args) => {
+        alert(JSON.stringify(args));
+      }
+    }
 
-    return { options, setOptionParameters }
+    return options;
   };
 })();
