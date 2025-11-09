@@ -3,11 +3,11 @@
 
   modules.Options = () => {
     const { InputRadio, InputText, Select } = ui;
-    const { options } = model.config.data;
+    const { options: optionsData } = model.config.data;
 
     // prettier-ignore
-    return crel("div", { class: "options" },
-      ...options.map((option, index) => (
+    const options = crel("div", { class: "options" },
+      ...optionsData.map((option, index) => (
         crel("div", { class: "options--option" },
           crel("p", option.group),
           crel("div", { class: "options--buttons" },
@@ -31,5 +31,11 @@
         )
       ))
     );
+
+    const setOptionParameters = (...args) => {
+      alert(JSON.stringify(args));
+    };
+
+    return { options, setOptionParameters }
   };
 })();

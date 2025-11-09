@@ -4,5 +4,12 @@
 
   await model.config.fetch();
 
-  crel(document.querySelector("#main"), Header(), Options(), Examples())
+  const { options, setOptionParameters } = Options();
+
+  // prettier-ignore
+  crel(document.querySelector("#main"),
+    Header(),
+    options,
+    Examples(setOptionParameters),
+  )
 })();
