@@ -1,11 +1,11 @@
 (async () => {
-  const { elementDataKey, model, modules } = globalThis.onlinepngtoolsGlobal;
+  const { elementPublicApi, model, modules } = globalThis.onlinepngtoolsGlobal;
   const { Examples, Header, Options } = modules;
 
   await model.config.fetch();
 
   const options = Options();
-  const { setOptionParameters } = options[elementDataKey];
+  const { setOptionParameters } = options[elementPublicApi];
 
   // prettier-ignore
   crel(document.querySelector("#main"),

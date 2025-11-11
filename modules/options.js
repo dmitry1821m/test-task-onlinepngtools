@@ -1,5 +1,5 @@
 (() => {
-  const { elementDataKey, model, modules, ui } = globalThis.onlinepngtoolsGlobal;
+  const { elementPublicApi, model, modules, ui } = globalThis.onlinepngtoolsGlobal;
 
   modules.Options = () => {
     const { InputRadio, InputText, Select } = ui;
@@ -39,7 +39,7 @@
       ))
     );
 
-    options[elementDataKey] = {
+    options[elementPublicApi] = {
       setOptionParameters: (optionsData) => {
         console.log(
           "Apply new parameters to controlled elements",
