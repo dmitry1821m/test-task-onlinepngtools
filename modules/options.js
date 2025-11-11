@@ -4,6 +4,7 @@
   modules.Options = () => {
     const { InputRadio, InputText, Select } = ui;
     const { options: optionsData } = model.config.data;
+    const controlledElements = {};
 
     // prettier-ignore
     const options = crel("div", { class: "options" },
@@ -17,13 +18,19 @@
                   crel("p", button.comment)
                 : '',
                 button.type === "list" ?
-                  Select("options--parameter-item", button.name, button.values)
+                  controlledElements[button.name] = (
+                    Select("options--parameter-item", button.name, button.values)
+                  )
                 : '',
                 button.type === "radio" ?
-                  InputRadio("options--parameter-item", `option-${index}`, button.value, button.label)
+                  controlledElements[button.name] = (
+                    InputRadio("options--parameter-item", `option-${index}`, button.value, button.label)
+                  )
                 : '',
                 button.type === "text" ?
-                  InputText("options--parameter-item", button.name, button.value)
+                  controlledElements[button.name] = (
+                    InputText("options--parameter-item", button.name, button.value)
+                  )
                 : '',
               )
             ))
@@ -33,8 +40,11 @@
     );
 
     options[elementDataKey] = {
-      setOptionParameters: (...args) => {
-        alert(JSON.stringify(args));
+      setOptionParameters: (optionsData) => {
+        console.log(
+          "Apply new parameters to controlled elements",
+          { optionsData, controlledElements },
+        );
       }
     }
 
